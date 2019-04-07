@@ -23,7 +23,8 @@
         methods:{
         	addNewArticle(){
         		this.$emit('addNewAricleToArry', this.newArticle);
-        		console.log(this.newArticle);
+                this.newArticle = '';
+        		
         	}
         },
     

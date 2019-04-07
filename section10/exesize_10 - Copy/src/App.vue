@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <app-head></app-head>
-        <app-input></app-input>
-        <app-articles></app-articles>
+        <app-input @addNewAricleToArry="newAricle"></app-input>
+        <app-articles :articles="article" ></app-articles>
 
     </div>
 </template>
@@ -17,7 +17,15 @@
         data: function() {
             return {
 
+                article:['jedan', 'dva'],
+
             }
+        },
+
+        methods:{
+            newAricle(newArticle){
+                this.article.push(newArticle);
+            },
         },
 
         components: {
