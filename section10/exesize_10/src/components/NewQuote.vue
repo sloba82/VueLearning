@@ -27,6 +27,10 @@
 				 this.$emit('quoteAdded', this.quote);
 				 this.quote = '';
 			}
+		},
+
+		created() {
+			console.log(this);
 		}
 
 	}
