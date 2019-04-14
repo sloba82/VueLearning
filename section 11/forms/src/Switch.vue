@@ -10,17 +10,13 @@
                 :class="{active: !value}">Off</div>
     </div>
 </template>
-
 <script>
     export default {
-
-
         props:['value'],
-
-        methodes:{
-            switched(){
+        methods:{
+            switched(isOn){
                 this.$emit('input', isOn);
-            }
+            },
         }
     }
 </script>
