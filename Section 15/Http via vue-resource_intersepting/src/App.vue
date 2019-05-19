@@ -33,22 +33,29 @@
     				username:'',
     				email:'',
     			},
-
+ 
                 users: [],
+                resource: {},
     		};
     	},
 
     	methods: {
     		submit(){
  
-    			console.log(this.user);
+/*    			console.log(this.user);
 
     			this.$http.post('', this.user)
     			.then(response =>{
     				console.log(response);
     			}, error => {
     				console.log(error);
-    			});
+    			});*/
+
+
+
+            this.resource.save({}, this.user);   
+
+
 
     		},
 
@@ -68,7 +75,11 @@
 
 
             },
-    	}
+    	},
+
+        created(){
+            this.resource = this.$resource();
+        } 
     }
 </script>
 
