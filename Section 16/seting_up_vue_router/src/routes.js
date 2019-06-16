@@ -1,8 +1,8 @@
-import Home from './components/Home.vue'
-import User from './components/user/User.vue'
+import Home from './components/Home.vue';
+import User from './components/user/User.vue';
 
 
-export const router = [
+export const routes = [
 	{path: '' , component: Home},
 	{path: '/user' , component: User},
 
